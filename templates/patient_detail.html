@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Patient Details</h1>
+        <h2>{{ patient[1] }}</h2>
+        <p>Age: {{ patient[2] }}</p>
+        <p>Gender: {{ patient[3] }}</p>
+        <h3>Diagnostics</h3>
+        <ul>
+            {% for diagnostic in diagnostics %}
+            <li>Date: {{ diagnostic[2] }}, Results: {{ diagnostic[3] }}, Recommendations: {{ diagnostic[4] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
